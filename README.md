@@ -97,3 +97,5 @@ A Tic Tac Toe Board
 ```
 
 And you can quickly see what it does!
+
+  row = [" "," "," "," "," "," "," "," "," "]
