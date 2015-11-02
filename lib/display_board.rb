@@ -9,7 +9,7 @@ end
 
 def print_cell_row
 	cell = "   "
-	puts "#{cell}|#{cell}|#{cell}"
+	print "#{cell}|#{cell}|#{cell}\n"
 end
 
 def print_sep_row
@@ -17,5 +17,5 @@ def print_sep_row
 	12.times do |n|
 		line += "-"
 	end
-	puts line
+	print line + "\n"
 end
