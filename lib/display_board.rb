@@ -5,7 +5,6 @@ def display_board
   rows = puts "   " + "|" + "   " + "|" + "   "
   separate = puts "-----------"
   rows = puts "   " + "|" + "   " + "|" + "   "
-
 end
 
 display_board
