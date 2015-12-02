@@ -6,6 +6,14 @@ def display_board
   puts row
   puts dashes
   puts row
+
+end
+
+def display_board(board)
+  row="#{cell}|#{cell}|#{cell}"
+  dashes="-----------"
+  puts row
   puts dashes
   puts row
+
 end
