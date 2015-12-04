@@ -2,5 +2,9 @@
 def display_board
   cells= "   |   |   "
   border= "-----------"
-  puts cells + border + cells + border + cells
+  puts cells
+  puts border
+  puts cells
+  puts border
+  puts cells
 end
