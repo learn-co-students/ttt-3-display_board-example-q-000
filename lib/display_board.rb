@@ -1,7 +1,4 @@
-def display_board
-  print  "   |   |
-          -----------
-             |   |
-          -----------
-             |   |   "
+board = [" "," "," "," "," "," "," "," "," "]
+  display_board(board)
 end
+
