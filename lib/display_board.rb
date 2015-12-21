@@ -1,1 +1,13 @@
-# Define a method display_board that prints a 3x3 Tic Tac Toe Board
+BoardA= "   |   |   "
+BoardB= "-----------"
+BoardC= "   |   |   "
+BoardD= "-----------"
+BoardE= "   |   |   "
+def display_board
+  puts "#{BoardA}"
+  puts "#{BoardB}"
+  puts "#{BoardC}"
+  puts "#{BoardD}"
+  puts "#{BoardE}"
+end
+display_board
