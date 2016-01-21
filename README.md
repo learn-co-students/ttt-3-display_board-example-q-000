@@ -1,103 +1,100 @@
-# Printing a Tic Tac Toe Board
+# Tic Tac Toe Board
 
 ## Overview
 
+### The Tic Tac Toe Board
+
+When building a Tic Tac Toe program, you're going to have to figure out a way to store or represent the game board. Looking at a Tic Tac Toe board, we can identify a few properties.
+
+```
+   |   |
+-----------      
+   |   |
+-----------   
+   |   |
+```
+
+A Tic Tac Toe board is basically a 3x3 grid with 9 total positions. You could think of the positions as being numbered, from top left to bottom right, as:
+
+```
+ 1 | 2 | 3
+-----------      
+ 4 | 5 | 6
+-----------   
+ 7 | 8 | 9
+```
+
+Each cell in the Tic Tac Toe board can thus be referred to by a simple single number identifier. The middle square would be referred to as `5`.
+
+This is super useful because it will eventually allow players to easily tell the program where they want to move. The player X could tell the program they want to move to the top left corner by saying "1". The board would represent that graphically (through ASCII) via:
+
+```
+ X |   |
+-----------      
+   |   |
+-----------   
+   |   |
+```
+
+ASCII just means using standard keyboard characters, also known as the ASCII character set, to draw graphics.
+
+An ASCII Cat:
+
+```
+/\     /\
+{  `---'  }
+{  O   O  }
+~~>  V  <~~
+ \  \|/  /
+  `-----'__
+  /     \  `^\_
+ {       }\ |\_\_   W
+ |  \_/  |/ /  \_\_( )
+  \__/  /(_O     \__/
+    (  /
+     ME
+```
+
+### Representing the Board as an Array
+
+Now that we have simplified the concept of a Tic Tac Toe board to a collection of 9 positions or cells, easily identified by number, how can we represent this in code? What tool do we have at our disposal that can represent a collection of things? Is there some magical way to store data in ruby as an ordered, indexed, list? If you're thinking "We can use an Array!", you're absolutely right.
+
+We need an array that has 9 elements. Each element in the array represents a position in the board. The first element in the array, index 0, is actually position 1 on the board, the top left corner. We'll represent the value of a position with a string that has a single space, `" "`.
+
+As a simplified example, imagine only a single row of tic tac toe. You would represent that with the following array:
+
+```ruby
+row = [" ", " ", " "]
+
+# Position 1: Left
+row[0]
+
+# Position 2: Middle
+row[1]
+
+# Position 3: Right
+row[2]
+
+# Move X to the Position 2, Middle
+row[1] = "X"
+row #=> [" ", "X", " "]
+```
+
+*Note: You should not create a multi-dimensional or nested array. The array should be flat and have only string values.*
+
+*Remember: Represent a position in the board array as a string with a space in it: `" "`*
+
 ## Objectives
 
-1. Define a method `display_board`
-2. Print multiple formatted strings.
+1. Define a local variable `board`.
+2. Assign `board` to an array with 9 string elements.
 
 ## Instructions
 
-1. Define a method `display_board` in `lib/display_board.rb`
-2. `display_board` should print out the specified Tic Tac Toe board.
-3. Run `learn` locally until you pass.
-4. Submit the lab.
+1. Define a local variable in `lib/board.rb` called `board`
+2. Set the `board` local variable equal to an array.
+3. Fill the `board` array with 9 strings containing a single space: `" "`.
+4. Run `learn` and read output and fix any errors.
+5. Submit your solution with `learn submit`.
 
-A Tic Tac Toe program is going to need to be able to display the current state of the board before every turn so that the player can see the board before deciding what move to make. You could imagine a program working as follows, from a player's perspective.
-
-```
-Welcome to Tic Tac Toe
-   |   |   
------------
-   |   |   
------------
-   |   |   
-What move would X like to make (1-9)?
-> 5
-   |   |   
------------
-   | X |   
------------
-   |   |   
-What move would O like to make (1-9)?
-> 1
- 0 |   |   
------------
-   | X |   
------------
-   |   |   
-# etc...
-```
-
-Because our program is going to have to do this repeatedly, we should encapsulate the procedure of printing a board within a method so that we can simply call it whenever we need to print the board.
-
-We're going to start with a simplified version of the `display_board` method. Instead of actually displaying the state of a Tic Tac Toe board, we're going to only print out an empty, hard-coded, board. Sure, this method wouldn't work in a real game, but if we can't print a predefined, hard-coded, simplest board, we're probably not going to be able to print a real board.
-
-> Building a simplified first version of a method is a common practice in programming (these methods are sometimes referred to as 'stubs'). By not trying to solve the entire problem at once, we can first focus on correctly structuring our code, laying out some basics for us to build upon. It allows us to get something working as quickly as possible and then improve the code. This process is called iterating on your code and it's just like editing an essay. It's the natural process of small incremental improvements.
-
-Our `display_board` method should print out a board that looks exactly like:
-
-```
-   |   |   
------------
-   |   |   
------------
-   |   |   
-```
-
-**Board Rules**
-
-1. Each cell is presented by a string with 3 spaces: <pre>"   "</pre>
-2. Each row has 3 cells, the middle separated by 2 `|` (pipe) characters: <pre>   |   |   </pre>
-3. There are 3 rows, with 2 separating lines of 11 `-` (dash) characters: `-----------` 
-
-You can build a single big string and output it once or you can output each line individually. The end result when you execute your method should be the ascii characters above.
-
-
-
-## Tip: Using IRB to experiment
-
-As you define display_board in `lib/display_board.rb`, you're going to want to test your method and see what it does. Just running the test suite with `learn` will give you feedback on it's behavior, but there's a quicker way to see how your method behaves and if it matches the desired outcome.
-
-Open IRB from your terminal by typing `irb`.
-
-> You'll know you're in your IRB session because your prompt will change and you'll be able to execute arbitrary ruby (type `1+1` into your IRB session. If you see `2`, you're good, if you see any kind of error, especially mentioning `bash`, you're still in your BASH terminal session, type in `irb`).
-
-Copy the contents of `lib/display_board.rb` to your IRB session.
-
-```
-// ♥ irb
-001:0 > def display_board
-002:1 >     puts "A Tic Tac Toe Board"
-003:1 >   end
-```
-
-*Don't forget to hit enter after you paste. You should see `=> :display_board`*
-
-Now you can evoke your method by calling it:
-
-```
-// ♥ irb
-001:0 > def display_board
-002:1 >     puts "A Tic Tac Toe Board"
-003:1 >   end
-=> :display_board
-004:0 > display_board
-A Tic Tac Toe Board
-=> nil
-```
-
-And you can quickly see what it does!
-
-<a href='https://learn.co/lessons/ttt-3-display_board-example' data-visibility='hidden'>View this lesson on Learn.co</a>
+<a href='https://learn.co/lessons/ttt-2-board-rb' data-visibility='hidden'>View this lesson on Learn.co</a>
