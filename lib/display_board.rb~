@@ -9,7 +9,7 @@ def display_board
 end
 
 def row
-  cell + cell_divider + cell + cell_divider + cell
+  cell + cell_divider + cell
 end
 
 def cell
