@@ -4,13 +4,13 @@ row2 = "----------"
 
 
 
-
-def display_board = 
-  puts row1
-  puts row2
-  puts row1
-  puts row2
-  puts row1
-  end
+ 
+  def display_board
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+end
 
 display_board
