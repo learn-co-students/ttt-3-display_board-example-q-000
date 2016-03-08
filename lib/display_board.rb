@@ -2,6 +2,9 @@
 def display_board
   cell = "   |   |   "
   divider = '-----------'
-  puts cell
-  puts divider
+  p cell
+  p divider
+  p cell
+  p divider
+  p cell
 end
