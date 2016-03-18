@@ -4,9 +4,9 @@
 
 def display_board
   puts("   |   |   ")   # 1st row
-  puts("-----------")   # 2nd row
+  puts("-"*11)          # 2nd row
   puts("   |   |   ")   # 3rd row
-  puts("-----------")   # 4th row
+  puts("-"*11)          # 4th row
   puts("   |   |   ")   # 5th row
 end
 
