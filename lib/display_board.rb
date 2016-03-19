@@ -11,3 +11,5 @@ def display_board
   puts empty_cells
 
 end
+
+display_board
