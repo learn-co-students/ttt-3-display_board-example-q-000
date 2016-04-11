@@ -8,3 +8,4 @@ print "   |   |   \n"
 
 end
 display_board
+
