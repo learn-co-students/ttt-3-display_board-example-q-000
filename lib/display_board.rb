@@ -1,10 +1,19 @@
 def display_board;
 
-    puts "  |  |  " "-----------" end
-   
-    puts " |  |  " "-----------" end
-   
-    puts " |  |  " end
+   puts "  |   |    "
+   puts "-----------"
+   puts "  |   |    "
+   puts "-----------"
+   puts "  |   |    "
 
 
 end 
+
+def print_tic_tac_toe;
+  puts "  |   |   "
+  puts "-----------"
+  puts "  |   |   "
+  puts "-----------"
+  puts "  |   |    "
+
+end
