@@ -7,8 +7,6 @@
 def display_board
   3.times do |i|
     puts "   |   |   "
-    puts "-----------" unless i>1
+    puts "-"*11 unless i>1
   end
 end
-
-display_board
