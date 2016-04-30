@@ -1,9 +1,11 @@
 def display_board
-  puts("   |   |   ")
-  puts("-----------")
-  puts("   |   |   ")
-  puts("-----------")
-  puts("   |   |   ")
+  cell = "   |   |   "
+  divider = "-----------"
+  puts cell
+  puts divider
+  puts cell
+  puts divider
+  puts cell
 end
 
 display_board
