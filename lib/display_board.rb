@@ -2,11 +2,9 @@
 
 def display_board
  # anything between the lines above and below is inside the method
-"
-   |   |   
------------
-   |   |   
------------
-   |   |   
-"  
+"   |   |   "
+"-----------"
+"   |   |   "
+"-----------"
+"   |   |   "  
 end
