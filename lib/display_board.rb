@@ -1,7 +1,15 @@
 def display_board
-  return "A Tic Tac Toe Board"
+  return "a 3x3 tic tac toe board"
 end
 
+puts
+
 def display_board
-  return " "," "," "
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |    "
 end
+
+puts a 3x3 tic tac toe board
