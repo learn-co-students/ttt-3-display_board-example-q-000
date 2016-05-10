@@ -1,8 +1,7 @@
 # Define a method display_board that prints a 3x3 Tic Tac Toe Board
 
-
-def display_board
-  board = Array.new(9, " ")
+board = Array.new(9, " ")
+def display_board(board)
   divider = "-----------"
   temp = board.map{|b| " #{b} "}
   puts temp[0..2]*"|"
@@ -12,4 +11,4 @@ def display_board
   puts temp[6..8]*"|"
 end
 
-display_board
+display_board(board)
