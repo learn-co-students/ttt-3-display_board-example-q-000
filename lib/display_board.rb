@@ -6,7 +6,6 @@ def display_board
   puts "#{cell}|#{cell}|#{cell}"
   puts "-----------"
   puts "#{cell}|#{cell}|#{cell}"
-  puts "-----------"
 end
 
 print display_board
