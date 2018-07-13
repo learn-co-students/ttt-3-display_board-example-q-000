@@ -1,1 +1,8 @@
-# Define a method display_board that prints a 3x3 Tic Tac Toe Board
+def display_board
+  cell = "   "
+  separator = "|"
+  line = "-----------\n" 
+  row = Array.new(3, cell).join(separator) + "\n"
+  board = Array.new(3, row).join(line).chomp 
+  puts board
+end
