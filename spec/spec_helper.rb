@@ -1,3 +1,5 @@
+require_relative '../lib/display_board'
+
 def capture_puts
   begin
     old_stdout = $stdout
